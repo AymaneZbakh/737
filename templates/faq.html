@@ -1,0 +1,68 @@
+<ion-view view-title="About">
+    <ion-nav-buttons side="primary">
+        <!--          <button class="button button-clear" ng-click="angular.element($('#ngcont')).scope().showFaq('hide');">-->
+        <button class="button button-clear" onclick="showFaq('hide');">
+            Close
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <span class="item">
+                <span style="float:left">Version</span>
+                <span class="item-note" style="float:right">{{ appVersion }}</span>
+            </span>
+
+           
+            <a class="item item-icon-left" href="#" onclick="window.open('http://support.ael.aero', '_system');">
+                <i class="icon ion-earth"></i>
+                <span style="float:left">Support</span>
+                <span class="item-note" style="float:right">support.ael.aero</span>
+                
+            </a>
+            <a class="item item-icon-left" href="#" onclick="window.open('http://ael.aero', '_system');">
+                <i class="icon ion-earth"></i>
+                <span style="float:left">Web</span>
+                <span class="item-note" style="float:right">ael.aero</span>
+            </a>
+
+            <a class="item item-icon-right" href="#/faq/terms" type="item-text-wrap">
+                Terms and Conditions
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-right" href="#/faq/privacy" type="item-text-wrap">
+                Privacy Policy
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <div class="item item-divider">
+                FAQ
+            </div>
+<!--
+            <ion-item class="item item-icon-right" ng-repeat="faq in faqs" type="item-text-wrap" href="#/faq/{{faq.id}}">
+                {{faq.name}}
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+-->
+            <ion-item class="item item-icon-right" type="item-text-wrap" href="#/faq/faq1">
+                How do subscriptions work?
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+            <ion-item class="item item-icon-right" type="item-text-wrap" href="#/faq/faq2">
+                How do I upgrade my subscription?
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+            <ion-item class="item item-icon-right" type="item-text-wrap" href="#/faq/faq3">
+                How do I unsubscribe?
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+            <ion-item class="item item-icon-right" type="item-text-wrap" href="#/faq/faq4">
+                When do subscription renew?
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+            <ion-item class="item item-icon-right" type="item-text-wrap" href="#/faq/faq5">
+                What if I want to cancel my subscription before it expires?
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+            
+        </ion-list>
+    </ion-content>
+</ion-view>

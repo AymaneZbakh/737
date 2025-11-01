@@ -1,0 +1,446 @@
+<krpano version="1.17.4" onstart="startup();">
+	
+	<!-- the skin -->
+	<include url="defaultskin.xml" />
+	
+	<action name="startup">
+		if(startscene === null, copy(startscene,scene[scene_1].name));
+		loadscene(get(startscene), null, MERGE);
+	</action>
+	<!-- auto rotate -->
+<!-- 	<autorotate enabled="false" speed="3.0" waittime="5"  />	-->
+ 	<events onmousedown="set(autorotate.enabled,false)"  />
+	
+	<scene name="scene_1" title="COCKPIT" onstart="" lat="" lng="" heading="" tooltip="Cockpit">
+	
+	<!-- view settings -->
+	<view hlookat="0" vlookat="0" maxpixelzoom="1.0" fovmax="100" limitview="auto" />
+	
+	
+	
+
+	<preview url="b737.tiles/preview.jpg" />
+
+	<image type="CUBE" multires="true" tilesize="512" progressive="false">
+		<level tiledimagewidth="9608" tiledimageheight="9608">
+			<cube url="b737.tiles/mres_%s/l5/%v/l5_%s_%v_%h.jpg" />
+		</level>
+		<level tiledimagewidth="4804" tiledimageheight="4804">
+			<cube url="b737.tiles/mres_%s/l4/%v/l4_%s_%v_%h.jpg" />
+		</level>
+		<level tiledimagewidth="2402" tiledimageheight="2402">
+			<cube url="b737.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+		</level>
+		<level tiledimagewidth="1202" tiledimageheight="1202">
+			<cube url="b737.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+		</level>
+		<level tiledimagewidth="602" tiledimageheight="602">
+			<cube url="b737.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+		</level>
+		<mobile>
+			<cube url="b737.tiles/mobile_%s.jpg" />
+		</mobile>
+	</image>
+
+	
+	
+	
+		<!--	1 Electrical Power Up  -->
+		<hotspot name="epu1" id="electrical-power-up" style="hotspot-check | hotspot1" ath="-23.967" atv="-37.836"		onclick="close-pop-ups();js(showEl(PopUp-1-1));js(showOverlay());" />
+		<hotspot name="epu2" id="electrical-power-up" style="hotspot-check | hotspot2" ath="-15.814" atv="-32.690"		onclick="close-pop-ups();js(showEl(PopUp-1-2));js(showOverlay());" />
+		<hotspot name="epu3" id="electrical-power-up" style="hotspot-check | hotspot3" ath="-53.082" atv="-49.290"		onclick="close-pop-ups();js(showEl(PopUp-1-3));js(showOverlay());" />
+		<hotspot name="epu4" id="electrical-power-up" style="hotspot-check | hotspot4" ath="-3.252" atv="-13.714"		onclick="close-pop-ups();js(showEl(PopUp-1-4));js(showOverlay());" />
+		<hotspot name="epu5" id="electrical-power-up" style="hotspot-check | hotspot5" ath="15.420" atv="-31.865"		onclick="close-pop-ups();js(showEl(PopUp-1-5));js(showOverlay());" />
+		<hotspot name="epu6" id="electrical-power-up" style="hotspot-check | hotspot6" ath="8.888" atv="23.421"			onclick="close-pop-ups();js(showEl(PopUp-1-6));js(showOverlay());" />
+		<hotspot name="epu7" id="electrical-power-up" style="hotspot-check | hotspot7" ath="-12.750" atv="-23.495"		onclick="close-pop-ups();js(showEl(PopUp-1-7));js(showOverlay());" />
+		<hotspot name="epu8" id="electrical-power-up" style="hotspot-check | hotspot8" ath="-6.464" atv="57.294"		onclick="close-pop-ups();js(showEl(PopUp-1-8));js(showOverlay());" />
+		<hotspot name="epu9" id="electrical-power-up" style="hotspot-check | hotspot9" ath="-6.602" atv="-9.364"		onclick="close-pop-ups();js(showEl(PopUp-1-9));js(showOverlay());" />
+		<hotspot name="epu10" id="electrical-power-up" style="hotspot-check | hotspot10" ath="-14.214" atv="59.409"		onclick="close-pop-ups();js(showEl(PopUp-1-10));js(showOverlay());" />		
+
+		<!-- Notes Electrical Power Up -->
+		<hotspot id="electrical-power-up"
+		extra="true"
+		transcript="The first pilot to enter the cockpit performs the Electrical Power Up procedure. 
+		If ground power is available, stop the procedure before the APU&#47;Wheel well fire test &#40;this is done later as a part of the FO Preflight Procedure&#41;." 		
+		/>
+		 
+		 
+		 
+		<!--	2 Preliminary Preflight Procedure – Captain or First Officer  -->		
+		<hotspot name="pc1-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot1" ath="-91.228" atv="-75.820"			onclick="close-pop-ups();js(showEl(PopUp-2-1));js(showOverlay());" />
+		<hotspot name="pc2-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot2" ath="62.149" atv="-53.096"			onclick="close-pop-ups();js(showEl(PopUp-2-2));js(showOverlay());" />
+		<hotspot name="pc3-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot3" ath="97.077" atv="-79.981"		onclick="close-pop-ups();js(showEl(PopUp-2-3));js(showOverlay());" />
+		<hotspot name="pc4-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot4" ath="-109.188" atv="-62.014"			onclick="close-pop-ups();js(showEl(PopUp-2-4));js(showOverlay());" />
+		<hotspot name="pc5-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot5" ath="-75.775" atv="-61.715"		onclick="close-pop-ups();js(showEl(PopUp-2-5));js(showOverlay());" />
+		<hotspot name="pc6-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot6" ath="-176.920" atv="-81.486"		onclick="close-pop-ups();js(showEl(PopUp-2-6));js(showOverlay());" />
+		<hotspot name="pc7-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot7" ath="132.712" atv="-72.700"		onclick="close-pop-ups();js(showEl(PopUp-2-7));js(showOverlay());" />
+		<hotspot name="pc8-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot8" ath="98.121" atv="-70.712"			onclick="close-pop-ups();js(showEl(PopUp-2-8));js(showOverlay());" />
+		<hotspot name="pc9-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot9" ath="57.551" atv="-78.155"		onclick="close-pop-ups();js(showEl(PopUp-2-9));js(showOverlay());" />
+		<hotspot name="pc10-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot10" ath="111.253" atv="-62.987"		onclick="close-pop-ups();js(showEl(PopUp-2-10));js(showOverlay());" />
+		<hotspot name="pc11-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot11" ath="105.537" atv="-56.132"		onclick="close-pop-ups();js(showEl(PopUp-2-11));js(showOverlay());" />
+		<hotspot name="pc12-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot12" ath="97.339" atv="-59.707"		onclick="close-pop-ups();js(showEl(PopUp-2-12));js(showOverlay());" />
+		<hotspot name="pc13-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot13" ath="125.232" atv="1.725"		onclick="close-pop-ups();js(showEl(PopUp-2-13));js(showOverlay());" />
+		<hotspot name="pc14-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot14" ath="126.146" atv="76.900"		onclick="close-pop-ups();js(showEl(PopUp-2-14));js(showOverlay());" />
+		<hotspot name="pc15-pnf" id="preliminary-preflight-procedure-cap" style="hotspot-check | hotspot15" ath="-9.047" atv="51.281"		onclick="close-pop-ups();js(showEl(PopUp-2-15));js(showOverlay());" />
+		 
+		<!-- Notes Preliminary Preflight Procedure -->
+		<hotspot id="preliminary-preflight-procedure-cap" 
+		extra="true" 
+		transcript="The first pilot to enter the cockpit performs the preliminary preflight procedure. 
+		Either pilot turns on the AC mobile phone and tunes&#47;sets VHF &#35;2 to the applicable handling frequency. 
+		Select speaker volume to a level at which it’s easy to hear any eventual calls addressing the aircraft. &lt;br/&gt; &lt;br/&gt;
+		
+		&lt;u&gt;Engine oil quantity:&lt;/u&gt; &lt;br/&gt;
+		12 quarts or more for dispatch. For longer flights only leave homebase with 15 quarts &#40;75&#37;&#41; or more. &lt;br/&gt; &lt;br/&gt;
+		
+		&lt;u&gt;Maintenance documents:&lt;/u&gt; &lt;br/&gt;
+		The commander shall check the maintenance documents and AC briefing card, and brief the R&#47;P on this.
+		Remember to brief SCCM on technical items relevant to cabin crew operations.&lt;br/&gt; &lt;br/&gt;
+		
+		&lt;u&gt;Flight deck door access system check:&lt;/u&gt; &lt;br/&gt;
+		Shall be performed before the first flight of the AC each day.
+		The check is done according to FCOM supplementary procedures during the preliminary preflight procedures. &lt;br/&gt; &lt;br/&gt;
+		
+		&lt;em&gt;Note: The preliminary preflight procedure up to and including oxygen&#47;hydraulic&#47;oil quantity is done before every flight sector. 
+		The full procedure is only done after a crew change or after maintenance action.&lt;/em&gt;" 		
+		/>
+
+		<!-- 3 CDU PREFLIGT PROCEDURE  -->
+			
+			
+			
+		<!-- 4 PREFLIGHT PROCEDURE F/O  -->
+
+		<!-- F/O -->
+		<hotspot name="ppfo1" id="preflight-procedure-off" style="hotspot-check | hotspot1" ath="-46.142" atv="-45.168"			onclick="close-pop-ups();js(showEl(PopUp-4-1-fo));js(showOverlay());" />
+		<hotspot name="ppfo2" id="preflight-procedure-off" style="hotspot-check | hotspot2" ath="-36.140" atv="-30.213"			onclick="close-pop-ups();js(showEl(PopUp-4-2-fo));js(showOverlay());" />
+		<hotspot name="ppfo3" id="preflight-procedure-off" style="hotspot-check | hotspot3" ath="-30.947" atv="-25.628"			onclick="close-pop-ups();js(showEl(PopUp-4-3-fo));js(showOverlay());" />
+		<hotspot name="ppfo4" id="preflight-procedure-off" style="hotspot-check | hotspot4" ath="-26.191" atv="-16.458"			onclick="close-pop-ups();js(showEl(PopUp-4-4-fo));js(showOverlay());" />
+		<hotspot name="ppfo5" id="preflight-procedure-off" style="hotspot-check | hotspot5" ath="-19.973" atv="-44.564"			onclick="close-pop-ups();js(showEl(PopUp-4-5-fo));js(showOverlay());" />
+		<hotspot name="ppfo6" id="preflight-procedure-off" style="hotspot-check | hotspot6" ath="-0.431" atv="-37.010"			onclick="close-pop-ups();js(showEl(PopUp-4-6-fo));js(showOverlay());" />
+		<hotspot name="ppfo7" id="preflight-procedure-off" style="hotspot-check | hotspot7" ath="-1.378" atv="-29.918"			onclick="close-pop-ups();js(showEl(PopUp-4-7-fo));js(showOverlay());" />
+		<hotspot name="ppfo8" id="preflight-procedure-off" style="hotspot-check | hotspot8" ath="-0.287" atv="-23.733"			onclick="close-pop-ups();js(showEl(PopUp-4-8-fo));js(showOverlay());" />
+		<hotspot name="ppfo9" id="preflight-procedure-off" style="hotspot-check | hotspot9" ath="-2.901" atv="-12.642"			onclick="close-pop-ups();js(showEl(PopUp-4-9-fo));js(showOverlay());" />
+		<hotspot name="ppfo10" id="preflight-procedure-off" style="hotspot-check | hotspot10" ath="29.469" atv="-62.151"		onclick="close-pop-ups();js(showEl(PopUp-4-10-fo));js(showOverlay());" />		
+		<hotspot name="ppfo11" id="preflight-procedure-off" style="hotspot-check | hotspot11" ath="29.663" atv="-53.646"		onclick="close-pop-ups();js(showEl(PopUp-4-11-fo));js(showOverlay());" />
+		<hotspot name="ppfo12" id="preflight-procedure-off" style="hotspot-check | hotspot12" ath="14.223" atv="-42.666"		onclick="close-pop-ups();js(showEl(PopUp-4-12-fo));js(showOverlay());" />
+		<hotspot name="ppfo13" id="preflight-procedure-off" style="hotspot-check | hotspot13" ath="24.121" atv="-40.200"		onclick="close-pop-ups();js(showEl(PopUp-4-13-fo));js(showOverlay());" />
+		<hotspot name="ppfo14" id="preflight-procedure-off" style="hotspot-check | hotspot14" ath="15.437" atv="-31.778"		onclick="close-pop-ups();js(showEl(PopUp-4-14-fo));js(showOverlay());" />
+		<hotspot name="ppfo15" id="preflight-procedure-off" style="hotspot-check | hotspot15" ath="38.661" atv="-34.979"		onclick="close-pop-ups();js(showEl(PopUp-4-15-fo));js(showOverlay());" />
+		<hotspot name="ppfo16" id="preflight-procedure-off" style="hotspot-check | hotspot16" ath="25.713" atv="-17.249"		onclick="close-pop-ups();js(showEl(PopUp-4-16-fo));js(showOverlay());" />
+		<hotspot name="ppfo17" id="preflight-procedure-off" style="hotspot-check | hotspot17" ath="-13.909" atv="-8.917"		onclick="close-pop-ups();js(showEl(PopUp-4-17-fo));js(showOverlay());" />
+		<hotspot name="ppfo18" id="preflight-procedure-off" style="hotspot-check | hotspot18" ath="2.097" atv="-9.840"		onclick="close-pop-ups();js(showEl(PopUp-4-18-fo));js(showOverlay());" />
+		<hotspot name="ppfo19" id="preflight-procedure-off" style="hotspot-check | hotspot19" ath="7.265" atv="-8.164"		onclick="close-pop-ups();js(showEl(PopUp-4-19-fo));js(showOverlay());" />
+		<hotspot name="ppfo20" id="preflight-procedure-off" style="hotspot-check | hotspot20" ath="16.981" atv="-9.279"		onclick="close-pop-ups();js(showEl(PopUp-4-20-fo));js(showOverlay());" />
+		<hotspot name="ppfo21" id="preflight-procedure-off" style="hotspot-check | hotspot21" ath="11.883" atv="9.856"		onclick="close-pop-ups();js(showEl(PopUp-4-21-fo));js(showOverlay());" />
+		<hotspot name="ppfo22" id="preflight-procedure-off" style="hotspot-check | hotspot22" ath="18.945" atv="9.314"		onclick="close-pop-ups();js(showEl(PopUp-4-22-fo));js(showOverlay());" />
+		<hotspot name="ppfo23" id="preflight-procedure-off" style="hotspot-check | hotspot23" ath="50.335" atv="35.833"		onclick="close-pop-ups();js(showEl(PopUp-4-23-fo));js(showOverlay());" />
+		<hotspot name="ppfo24" id="preflight-procedure-off" style="hotspot-check | hotspot24" ath="31.768" atv="19.102"		onclick="close-pop-ups();js(showEl(PopUp-4-24-fo));js(showOverlay());" />
+		<hotspot name="ppfo25" id="preflight-procedure-off" style="hotspot-check | hotspot25" ath="19.786" atv="16.137"		onclick="close-pop-ups();js(showEl(PopUp-4-25-fo));js(showOverlay());" />
+		<hotspot name="ppfo26" id="preflight-procedure-off" style="hotspot-check | hotspot26" ath="13.842" atv="17.922"		onclick="close-pop-ups();js(showEl(PopUp-4-26-fo));js(showOverlay());" />
+		<hotspot name="ppfo27" id="preflight-procedure-off" style="hotspot-check | hotspot27" ath="12.498" atv="18.069"		onclick="close-pop-ups();js(showEl(PopUp-4-27-fo));js(showOverlay());" />
+		<hotspot name="ppfo28" id="preflight-procedure-off" style="hotspot-check | hotspot28" ath="15.302" atv="15.781"		onclick="close-pop-ups();js(showEl(PopUp-4-28-fo));js(showOverlay());" />
+		<hotspot name="ppfo29" id="preflight-procedure-off" style="hotspot-check | hotspot29" ath="25.255" atv="20.079"		onclick="close-pop-ups();js(showEl(PopUp-4-29-fo));js(showOverlay());" />
+		<hotspot name="ppfo30" id="preflight-procedure-off" style="hotspot-check | hotspot30" ath="19.065" atv="30.619"		onclick="close-pop-ups();js(showEl(PopUp-4-30-fo));js(showOverlay());" />
+		<hotspot name="ppfo31" id="preflight-procedure-off" style="hotspot-check | hotspot31" ath="8.934" atv="23.531"		onclick="close-pop-ups();js(showEl(PopUp-4-31-fo));js(showOverlay());" />
+		<hotspot name="ppfo32" id="preflight-procedure-off" style="hotspot-check | hotspot32" ath="1.590" atv="16.767"		onclick="close-pop-ups();js(showEl(PopUp-4-32-fo));js(showOverlay());" />
+		<hotspot name="ppfo33" id="preflight-procedure-off" style="hotspot-check | hotspot33" ath="2.177" atv="18.186"		onclick="close-pop-ups();js(showEl(PopUp-4-33-fo));js(showOverlay());" />
+		<hotspot name="ppfo34" id="preflight-procedure-off" style="hotspot-check | hotspot34" ath="-1.685" atv="15.444"		onclick="close-pop-ups();js(showEl(PopUp-4-34-fo));js(showOverlay());" />
+		<hotspot name="ppfo35" id="preflight-procedure-off" style="hotspot-check | hotspot35" ath="-2.982" atv="17.813"		onclick="close-pop-ups();js(showEl(PopUp-4-35-fo));js(showOverlay());" />
+		<hotspot name="ppfo36" id="preflight-procedure-off" style="hotspot-check | hotspot36" ath="-1.086" atv="22.519"		onclick="close-pop-ups();js(showEl(PopUp-4-36-fo));js(showOverlay());" />
+		<hotspot name="ppfo37" id="preflight-procedure-off" style="hotspot-check | hotspot37" ath="-1.378" atv="62.220"		onclick="close-pop-ups();js(showEl(PopUp-4-37-fo));js(showOverlay());" />
+		<hotspot name="ppfo38" id="preflight-procedure-off" style="hotspot-check | hotspot38" ath="25.051" atv="66.445"		onclick="close-pop-ups();js(showEl(PopUp-4-38-fo));js(showOverlay());" />
+		<hotspot name="ppfo39" id="preflight-procedure-off" style="hotspot-check | hotspot39" ath="91.977" atv="82.272"		onclick="close-pop-ups();js(showEl(PopUp-4-39-fo));js(showOverlay());" />
+		<hotspot name="ppfo40" id="preflight-procedure-off" style="hotspot-check | hotspot40" ath="73.632" atv="48.595"		onclick="close-pop-ups();js(showEl(PopUp-4-40-fo));js(showOverlay());" />
+		<hotspot name="ppfo41" id="preflight-procedure-off" style="hotspot-check | hotspot41" ath="26.808" atv="35.066"		onclick="close-pop-ups();js(showEl(PopUp-4-41-fo));js(showOverlay());" />
+
+		
+		<!-- captain -->
+		<hotspot name="ppcpt1" id="preflight-procedure-cap" style="hotspot-check | hotspot1" ath="-10.963" atv="16.145"		onclick="close-pop-ups();js(showEl(PopUp-4-1-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt2" id="preflight-procedure-cap" style="hotspot-check | hotspot2" ath="-19.126" atv="9.467"		onclick="close-pop-ups();js(showEl(PopUp-4-2-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt3" id="preflight-procedure-cap" style="hotspot-check | hotspot3" ath="0.295" atv="10.549"		onclick="close-pop-ups();js(showEl(PopUp-4-3-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt4" id="preflight-procedure-cap" style="hotspot-check | hotspot4" ath="-50.236" atv="35.365"		onclick="close-pop-ups();js(showEl(PopUp-4-4-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt5" id="preflight-procedure-cap" style="hotspot-check | hotspot5" ath="-31.649" atv="18.807"		onclick="close-pop-ups();js(showEl(PopUp-4-5-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt6" id="preflight-procedure-cap" style="hotspot-check | hotspot6" ath="-30.926" atv="21.808"		onclick="close-pop-ups();js(showEl(PopUp-4-6-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt7" id="preflight-procedure-cap" style="hotspot-check | hotspot7" ath="-19.798" atv="16.088"		onclick="close-pop-ups();js(showEl(PopUp-4-7-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt8" id="preflight-procedure-cap" style="hotspot-check | hotspot8" ath="-16.323" atv="17.522"		onclick="close-pop-ups();js(showEl(PopUp-4-8-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt9" id="preflight-procedure-cap" style="hotspot-check | hotspot9" ath="-14.906" atv="17.637"		onclick="close-pop-ups();js(showEl(PopUp-4-9-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt10" id="preflight-procedure-cap" style="hotspot-check | hotspot10" ath="-12.553" atv="15.815"		onclick="close-pop-ups();js(showEl(PopUp-4-10-cpt));js(showOverlay());" />		
+		<hotspot name="ppcpt11" id="preflight-procedure-cap" style="hotspot-check | hotspot11" ath="-12.333" atv="17.564"		onclick="close-pop-ups();js(showEl(PopUp-4-11-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt12" id="preflight-procedure-cap" style="hotspot-check | hotspot12" ath="-24.113" atv="21.124"		onclick="close-pop-ups();js(showEl(PopUp-4-12-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt13" id="preflight-procedure-cap" style="hotspot-check | hotspot13" ath="-7.045" atv="17.320"		onclick="close-pop-ups();js(showEl(PopUp-4-13-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt14" id="preflight-procedure-cap" style="hotspot-check | hotspot14" ath="-7.125" atv="33.784"		onclick="close-pop-ups();js(showEl(PopUp-4-14-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt15" id="preflight-procedure-cap" style="hotspot-check | hotspot15" ath="-0.517" atv="39.092"		onclick="close-pop-ups();js(showEl(PopUp-4-15-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt16" id="preflight-procedure-cap" style="hotspot-check | hotspot16" ath="-0.301" atv="45.598"		onclick="close-pop-ups();js(showEl(PopUp-4-16-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt17" id="preflight-procedure-cap" style="hotspot-check | hotspot17" ath="7.764" atv="35.470"			onclick="close-pop-ups();js(showEl(PopUp-4-17-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt18" id="preflight-procedure-cap" style="hotspot-check | hotspot18" ath="-8.947" atv="51.122"		onclick="close-pop-ups();js(showEl(PopUp-4-18-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt19" id="preflight-procedure-cap" style="hotspot-check | hotspot19" ath="-0.420" atv="54.893"		onclick="close-pop-ups();js(showEl(PopUp-4-19-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt20" id="preflight-procedure-cap" style="hotspot-check | hotspot20" ath="8.202" atv="52.711"			onclick="close-pop-ups();js(showEl(PopUp-4-20-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt21" id="preflight-procedure-cap" style="hotspot-check | hotspot21" ath="-21.719" atv="61.690"		onclick="close-pop-ups();js(showEl(PopUp-4-21-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt22" id="preflight-procedure-cap" style="hotspot-check | hotspot22" ath="-72.532" atv="47.090"		onclick="close-pop-ups();js(showEl(PopUp-4-22-cpt));js(showOverlay());" />
+		<hotspot name="ppcpt23" id="preflight-procedure-cap" style="hotspot-check | hotspot23" ath="-27.104" atv="36.906"		onclick="close-pop-ups();js(showEl(PopUp-4-23-cpt));js(showOverlay());" />
+		
+		
+		<!-- Notes PREFLIGHT PROCEDURE -->
+		<hotspot id="preflight-procedure"
+		extra="true"
+		transcript="The PF is responsible for setting up the MCP and the nav. aids, in preparation for the takeoff briefing.
+		&#40;The CDR Arms the authrottle and sets V2 during his Before Start Procedure&#41;. &lt;br/&gt; &lt;br/&gt;
+		
+		For the exterior inspection Electric Hydraulic Pumps switches must be on. &lt;br/&gt; &lt;br/&gt;
+		
+		Right igniter shall be used from home bases and left igniter shall be used from out stations. &lt;br/&gt; &lt;br/&gt;
+		
+		Final expected cruise altitude&#47;level should be set in the flt alt window on the pressurization panel. &lt;br/&gt; &lt;br/&gt;
+		
+		If OAT is below 0 degrees Probe Heat must be ON during preflight procedure. &lt;br/&gt; &lt;br/&gt;
+		
+		For ETOPS flights check the APU oil level for each sector. To do this wait until 10 minutes after APU shutdown for most precise reading&#59;&lt;br/&gt; &lt;br/&gt;
+		
+		In the FMC &#62; INIT REF KEY &#62; INDEX KEY &#62; MAINT KEY &#62; APU KEY &#62; OILQUANT KEY. This will display either REFILL or FULL. "
+		/>
+		
+		
+					
+		<!-- 5 BEFORE START PROCEDURE -->		
+		<!-- CAPT -->
+		<hotspot name="bsp1-cap" id="before-start-procedure-cap" style="hotspot-check | hotspot1" ath="-10.512" atv="32.439"		onclick="close-pop-ups();js(showEl(PopUp-5-1-cpt));js(showOverlay());" />
+		<hotspot name="bsp2-cap" id="before-start-procedure-cap" style="hotspot-check | hotspot2" ath="-3.082" atv="20.865"			onclick="close-pop-ups();js(showEl(PopUp-5-2-cpt));js(showOverlay());" />
+		<hotspot name="bsp3-cap" id="before-start-procedure-cap" style="hotspot-check | hotspot3" ath="-27.510" atv="19.184"		onclick="close-pop-ups();js(showEl(PopUp-5-3-cpt));js(showOverlay());" />
+		<hotspot name="bsp4-cap" id="before-start-procedure-cap" style="hotspot-check | hotspot4" ath="-9.826" atv="9.905"			onclick="close-pop-ups();js(showEl(PopUp-5-4-cpt));js(showOverlay());" />
+		<hotspot name="bsp5-cap" id="before-start-procedure-cap" style="hotspot-check | hotspot5" ath="-43.112" atv="12.615"		onclick="close-pop-ups();js(showEl(PopUp-5-5-cpt));js(showOverlay());" />
+		<hotspot name="bsp6-cap" id="before-start-procedure-cap" style="hotspot-check | hotspot6" ath="-8.061" atv="45.834"			onclick="close-pop-ups();js(showEl(PopUp-5-6-cpt));js(showOverlay());" />
+		
+		<!-- F/O -->
+		<hotspot name="bsp1-off" id="before-start-procedure-off" style="hotspot-check | hotspot1" ath="90.578" atv="79.094"		onclick="close-pop-ups();js(showEl(PopUp-5-1-fo));js(showOverlay());" />
+		<hotspot name="bsp2-off" id="before-start-procedure-off" style="hotspot-check | hotspot2" ath="10.417" atv="33.345"			onclick="close-pop-ups();js(showEl(PopUp-5-2-fo));js(showOverlay());" />
+		<hotspot name="bsp3-off" id="before-start-procedure-off" style="hotspot-check | hotspot3" ath="-3.028" atv="20.859"			onclick="close-pop-ups();js(showEl(PopUp-5-3-fo));js(showOverlay());" />
+		<hotspot name="bsp4-off" id="before-start-procedure-off" style="hotspot-check | hotspot4" ath="22.171" atv="20.564"			onclick="close-pop-ups();js(showEl(PopUp-5-4-fo));js(showOverlay());" />
+		<hotspot name="bsp5-off" id="before-start-procedure-off" style="hotspot-check | hotspot5" ath="13.274" atv="-27.942"		onclick="close-pop-ups();js(showEl(PopUp-5-5-fo));js(showOverlay());" />
+		<hotspot name="bsp6-off" id="before-start-procedure-off" style="hotspot-check | hotspot6" ath="43.308" atv="12.633"			onclick="close-pop-ups();js(showEl(PopUp-5-6-fo));js(showOverlay());" />
+		<hotspot name="bsp7-off" id="before-start-procedure-off" style="hotspot-check | hotspot7" ath="-22.902" atv="-12.296"		onclick="close-pop-ups();js(showEl(PopUp-5-7-fo));js(showOverlay());" />
+		<hotspot name="bsp8-off" id="before-start-procedure-off" style="hotspot-check | hotspot8" ath="19.975" atv="-31.569"		onclick="close-pop-ups();js(showEl(PopUp-5-8-fo));js(showOverlay());" />
+		<hotspot name="bsp9-off" id="before-start-procedure-off" style="hotspot-check | hotspot9" ath="18.237" atv="-9.220"			onclick="close-pop-ups();js(showEl(PopUp-5-9-fo));js(showOverlay());" />
+		<hotspot name="bsp10-off" id="before-start-procedure-off" style="hotspot-check | hotspot10" ath="-19.819" atv="79.457"		onclick="close-pop-ups();js(showEl(PopUp-5-10-fo));js(showOverlay());" />
+
+		<!-- Notes BEFORE START PROCEDURE -->
+		<hotspot id="before-start-procedure"
+		extra="true"
+		transcript="The before start procedure can be initiated when papers are on board. It has been split up with a line just prior to Anti collision Light Switch. &lt;br/&gt; &lt;br/&gt;
+		
+		Prior to commencing the Before Start Procedure do the Loadsheet and EFB/TODC procedures. R&#47;P then finalizes the CDU preflight procedure
+		&#40;L&#47;P must verify all entries to be correct&#41;. &lt;br/&gt; &lt;br/&gt;
+		
+		&lt;em&gt;The pilot who will do the takeoff does the taxi and takeoff briefings. &lt;/em&gt; &lt;br/&gt; &lt;br/&gt;
+		
+		&lt;em&gt;As part of the takeoff briefing for the first flight of the day and following a change of either flight crew member, cabin altitude warning indications
+		and memory item procedures must be briefed on airplanes in which the CABIN ALTITUDE and TAKEOFF CONFIG lights are not installed, or are installed but not activated.
+		The briefing must contain the following information&#58; &lt;/em&gt;&lt;br/&gt;&lt;br/&gt;
+		
+		&lt;em&gt;Whenever the intermittent warning horn sounds in flight at an airplane flight altitude above 10,000 feet MSL&#58; &lt;/em&gt;&lt;br/&gt;&lt;br/&gt;
+		
+		&lt;em&gt;1. Immediately, don oxygen masks and set regulators to 100&#37;. &lt;/em&gt;&lt;br/&gt;
+		&lt;em&gt;2. Establish crew communications. &lt;/em&gt;&lt;br/&gt;
+		&lt;em&gt;3. Do the CABIN ALTITUDE WARNING or Rapid Depressurization non-normal checklist.  &lt;/em&gt;&lt;br/&gt;&lt;br/&gt;
+		
+		&lt;em&gt;Both pilots must verify on the overhead Cabin Altitude Panel that the cabin altitude is stabilized at or below 10,000 feet
+		before removing oxygen masks. &lt;/em&gt;&lt;br/&gt;&lt;br/&gt;
+		
+		Once the SCCM has reported &#34;Aircraft ready for movement&#34; he&#47;she will lock the cockpit door and R&#47;P can, upon L&#47;P’s command request pushback and startup.
+		When push back clearance has been received, continue the before start procedure and subsequently call for the Before Start checklist &#34;below-the-line&#34;.&lt;br/&gt;&lt;br/&gt;
+		
+		Clearance to pressurize the hydraulic systems is not required unless you expect movement of any of the flight control surfaces.&lt;br/&gt;&lt;br/&gt;
+		
+		Verify that the nose gear steering lockout pin is installed, or, if the nose gear steering lockout pin is not used,
+		depressurize hydraulic system A during the hydraulic panel set step.&lt;br/&gt;&lt;br/&gt;
+		
+		The L&#47;P calls the ground crew for push back coordination and confirms that the departure check is performed.
+		Both flight deck windows must be verified to be both closed and locked by pushing then pulling the handle." 		
+		/>
+		
+		<!-- 6 BEFORE TAXI PROCEDURE -->		
+
+		
+		<!-- F/O -->
+		<hotspot name="btxp1-off" id="before-taxi-procedure-off" style="hotspot-check | hotspot1" ath="-6.507" atv="-16.339"		onclick="close-pop-ups();js(showEl(PopUp-6-1-fo));js(showOverlay());" />
+		<hotspot name="btxp2-off" id="before-taxi-procedure-off" style="hotspot-check | hotspot2" ath="28.120" atv="-57.051"		onclick="close-pop-ups();js(showEl(PopUp-6-2-fo));js(showOverlay());" />
+		<hotspot name="btxp3-off" id="before-taxi-procedure-off" style="hotspot-check | hotspot3" ath="14.134" atv="-42.913"		onclick="close-pop-ups();js(showEl(PopUp-6-3-fo));js(showOverlay());" />
+		<hotspot name="btxp4-off" id="before-taxi-procedure-off" style="hotspot-check | hotspot4" ath="24.234" atv="-40.579"		onclick="close-pop-ups();js(showEl(PopUp-6-4-fo));js(showOverlay());" />
+		<hotspot name="btxp5-off" id="before-taxi-procedure-off" style="hotspot-check | hotspot5" ath="29.019" atv="-29.942"		onclick="close-pop-ups();js(showEl(PopUp-6-5-fo));js(showOverlay());" />
+		<hotspot name="btxp6-off" id="before-taxi-procedure-off" style="hotspot-check | hotspot6" ath="-6.680" atv="-8.857"			onclick="close-pop-ups();js(showEl(PopUp-6-6-fo));js(showOverlay());" />
+		<hotspot name="btxp7-off" id="before-taxi-procedure-off" style="hotspot-check | hotspot7" ath="-2.375" atv="-8.886"			onclick="close-pop-ups();js(showEl(PopUp-6-7-fo));js(showOverlay());" />
+		<hotspot name="btxp8-off" id="before-taxi-procedure-off" style="hotspot-check | hotspot8" ath="7.781" atv="35.393"			onclick="close-pop-ups();js(showEl(PopUp-6-8-fo));js(showOverlay());" />
+		<hotspot name="btxp9-off" id="before-taxi-procedure-off" style="hotspot-check | hotspot9" ath="-0.146" atv="34.101"			onclick="close-pop-ups();js(showEl(PopUp-6-9-fo));js(showOverlay());" />
+		<hotspot name="btxp10-off" id="before-taxi-procedure-off" style="hotspot-check | hotspot10" ath="26.302" atv="9.593"		onclick="close-pop-ups();js(showEl(PopUp-6-10-fo));js(showOverlay());" />
+		
+		<!-- cpt -->
+		<hotspot name="btxp1-cpt" id="before-taxi-procedure-cap" style="hotspot-check | hotspot1" ath="-0.345" atv="54.836"			onclick="close-pop-ups();js(showEl(PopUp-6-1-cpt));js(showOverlay());" />
+		<hotspot name="btxp2-cpt" id="before-taxi-procedure-cap" style="hotspot-check | hotspot2" ath="-36.477" atv="25.162"		onclick="close-pop-ups();js(showEl(PopUp-6-2-cpt));js(showOverlay());" />
+		<hotspot name="btxp3-cpt" id="before-taxi-procedure-cap" style="hotspot-check | hotspot3" ath="-26.501" atv="9.453"			onclick="close-pop-ups();js(showEl(PopUp-6-3-cpt));js(showOverlay());" />
+		
+		<!-- Notes BEFORE TAXI PROCEDURE -->
+		<hotspot id="before-taxi-procedure"
+		extra="true"
+		transcript="Once the pushback has commenced, the ground crew will normally clear you for engine start.
+		Ensure that the area behind the aircraft is clear of any obstructions&#47;FOD and it is safe to start the engines. &lt;br/&gt;&lt;br/&gt;
+		
+		Once the engines are stabilized and starter has cut out, the R&#47;P may commence the Before Taxi Procedure down to and including &quot;Engine start switches&quot;. 
+		When the L&#47;P receives the clear signal he&#47;she acknowledges by turning on the runway turn off lights. He&#47;She then orders: &quot;Flaps__&quot; and proceeds with the check of the flight controls.
+		The R&#47;P then continues and completes his&#47;hers Before Taxi Procedure.
+		To complete the Before Taxi Procedure, both pilots test their respective Master Caution Recall Panel." 		
+		/>
+		
+		
+		
+		
+		<!-- 7 BEFORE TAKEOFF PROCEDURE -->		
+		<!-- cpt -->		
+		<hotspot name="btp1-cpt" id="before-takeoff-procedure-cap" style="hotspot-check | hotspot1" ath="-19.324" atv="-8.850"			onclick="close-pop-ups();js(showEl(PopUp-7-1-cpt));js(showOverlay());" />
+		<hotspot name="btp2-cpt" id="before-takeoff-procedure-cap" style="hotspot-check | hotspot2" ath="-22.015" atv="10.804"			onclick="close-pop-ups();js(showEl(PopUp-7-2-cpt));js(showOverlay());" />		
+				
+		
+		<!-- f/o -->
+		<hotspot name="btp1-off" id="before-takeoff-procedure-off" style="hotspot-check | hotspot1" ath="15.468" atv="-9.017"			onclick="close-pop-ups();js(showEl(PopUp-7-1-fo));js(showOverlay());" />
+		<hotspot name="btp2-off" id="before-takeoff-procedure-off" style="hotspot-check | hotspot2" ath="22.015" atv="10.804"			onclick="close-pop-ups();js(showEl(PopUp-7-2-fo));js(showOverlay());" />
+		
+		<!-- Notes BEFORE TAKEOFF PROCEDURE -->
+		<hotspot id="before-takeoff-procedure" 
+		extra="true" 
+		transcript="Once line-up clearance has been received, do the before take off procedure.
+		R&#47;P switches on the strobe-lights. Call out &quot;clear right&#47;left&quot; respectively as the approach&#47;departure sector has been visually checked free of traffic. 
+		L&#47;P switches on the fixed landing lights. &lt;br/&gt;&lt;br/&gt;
+		
+		As a standard PF selects WXR radar on and PM chooses terrain for departure. 
+		If no significant delay to the is expected R&#47;P warns the cabin by switching the &quot;no smoking sign&quot; off
+		– waits for the chime to ring out – and then back to on for a second chime.&lt;br/&gt;&lt;br/&gt;
+		
+		L&#47;P calls for the Before Take Off Checklist."  		
+		/>
+		
+		
+		<!-- 8 AFTER TAKEOFF PROCEDURE  -->		
+		
+		<hotspot name="atc1" id="after-takeoff" style="hotspot-check | hotspot1" ath="25.397" atv="-26.668"		onclick="close-pop-ups();js(showEl(PopUp-8-1));js(showOverlay());" />
+		<hotspot name="atc2" id="after-takeoff" style="hotspot-check | hotspot2" ath="7.272" atv="-7.549"		onclick="close-pop-ups();js(showEl(PopUp-8-2));js(showOverlay());" />
+		<hotspot name="atc3" id="after-takeoff" style="hotspot-check | hotspot3" ath="2.057" atv="16.751"		onclick="close-pop-ups();js(showEl(PopUp-8-3));js(showOverlay());" />
+		<hotspot name="atc4" id="after-takeoff" style="hotspot-check | hotspot4" ath="9.241" atv="24.026"		onclick="close-pop-ups();js(showEl(PopUp-8-4));js(showOverlay());" />
+
+		
+		<!-- Notes AFTER TAKEOFF PROCEDURE -->
+		<hotspot id="after-takeoff" 
+		extra="true" 
+		transcript="The after T&#47;O procedure can be done when time permits and after &quot;flaps up, no light&quot; has been called.&lt;br/&gt;&lt;br/&gt;
+		
+		Continue climb to relevant altitude for acceleration to en-route climb speed &#40;NADP 2, continue to 3000 ft above aerodrome elevation&#41;.&lt;br/&gt;&lt;br/&gt;
+		
+		Call for VNAV &#40;or preferred mode of climb&#41; and select STD, crosschecking the altimeters. &#40;e.g. PF: &quot;STD, FL 45&quot;, PM: &quot;STD, FL 46&quot;
+		if there is 100 feet deviation between the two altimeters when the check was made&#41;. Set STD only if cleared to a Flight Level. &lt;br/&gt;&lt;br/&gt;
+		
+		PF calls for the After Takeoff checklist."  		
+		/>
+		
+		
+		
+		
+		<!--	9 DESCENT PROCEDURE  -->	
+
+
+
+		<!--	10 After Landing Procedure – Captain or First Officer  -->	
+		<!-- capt -->
+		<hotspot name="alp1-cap" id="after-landing-procedure-cap" style="hotspot-check | hotspot1" ath="-7.028" atv="34.306"		onclick="close-pop-ups();js(showEl(PopUp-10-1-cpt));js(showOverlay());" />
+		<hotspot name="alp2-cap" id="after-landing-procedure-cap" style="hotspot-check | hotspot2" ath="-22.099" atv="10.765"		onclick="close-pop-ups();js(showEl(PopUp-10-2-cpt));js(showOverlay());" />
+		<hotspot name="alp3-cap" id="after-landing-procedure-cap" style="hotspot-check | hotspot3" ath="-18.027" atv="-9.083"		onclick="close-pop-ups();js(showEl(PopUp-10-3-cpt));js(showOverlay());" />
+		
+		
+		<!-- fo -->
+		<hotspot name="alp1-off" id="after-landing-procedure-off" style="hotspot-check | hotspot1" ath="27.965" atv="-56.458"	onclick="close-pop-ups();js(showEl(PopUp-10-1-fo));js(showOverlay());" />
+		<hotspot name="alp2-off" id="after-landing-procedure-off" style="hotspot-check | hotspot2" ath="7.272" atv="-7.549"		onclick="close-pop-ups();js(showEl(PopUp-10-2-fo));js(showOverlay());" />
+		<hotspot name="alp3-off" id="after-landing-procedure-off" style="hotspot-check | hotspot3" ath="16.606" atv="-8.907"	onclick="close-pop-ups();js(showEl(PopUp-10-3-fo));js(showOverlay());" />
+		<hotspot name="alp4-off" id="after-landing-procedure-off" style="hotspot-check | hotspot4" ath="16.353" atv="11.287"	onclick="close-pop-ups();js(showEl(PopUp-10-4-fo));js(showOverlay());" />
+		<hotspot name="alp5-off" id="after-landing-procedure-off" style="hotspot-check | hotspot5" ath="2.035" atv="16.907"		onclick="close-pop-ups();js(showEl(PopUp-10-5-fo));js(showOverlay());" />
+		<hotspot name="alp6-off" id="after-landing-procedure-off" style="hotspot-check | hotspot6" ath="7.950" atv="35.727"		onclick="close-pop-ups();js(showEl(PopUp-10-6-fo));js(showOverlay());" />
+		<hotspot name="alp7-off" id="after-landing-procedure-off" style="hotspot-check | hotspot7" ath="9.612" atv="45.449"		onclick="close-pop-ups();js(showEl(PopUp-10-7-fo));js(showOverlay());" />
+		<hotspot name="alp8-off" id="after-landing-procedure-off" style="hotspot-check | hotspot8" ath="-6.832" atv="-8.910"	onclick="close-pop-ups();js(showEl(PopUp-10-8-fo));js(showOverlay());" />
+
+	
+		<!-- Notes After Landing Procedure -->
+		<hotspot id="after-landing-procedure" 
+		extra="true" 
+		transcript="The After Landing Procedure can be initiated and completed when:&lt;br/&gt;&lt;br/&gt;
+		
+		&lt;ul&gt;
+			&lt;li&gt;Clear of the runway.&lt;/li&gt;
+			&lt;li&gt;Speed brakes stowed by L&#47;P &lt;/li&gt;
+			&lt;li&gt;&lt;u&gt;After&lt;/u&gt; the taxi clearance has been received, acknowledged, written in the FMC scratchpad and understood by both pilots.&lt;/li&gt;
+		&lt;/ul&gt;&lt;br/&gt;&lt;br/&gt;
+		
+		Ask L&#47;P if APU is required. Plan the APU start, so APU is operational when reaching stand. "  		
+		/>
+
+		
+	
+	
+		<!--11	SHUTDWN PROCEDURE  -->	
+		<!-- first officer -->
+		<hotspot name="sdp1-off" id="shutdown-procedure-off" style="hotspot-check | hotspot1" ath="1.767" atv="-23.229"			onclick="close-pop-ups();js(showEl(PopUp-11-1-fo));js(showOverlay());" />
+		<hotspot name="sdp2-off" id="shutdown-procedure-off" style="hotspot-check | hotspot2" ath="-10.768" atv="-19.414"		onclick="close-pop-ups();js(showEl(PopUp-11-2-fo));js(showOverlay());" />
+		<hotspot name="sdp3-off" id="shutdown-procedure-off" style="hotspot-check | hotspot3" ath="-23.287" atv="-13.116"		onclick="close-pop-ups();js(showEl(PopUp-11-3-fo));js(showOverlay());" />
+		<hotspot name="sdp4-off" id="shutdown-procedure-off" style="hotspot-check | hotspot4" ath="-17.299" atv="-40.096"		onclick="close-pop-ups();js(showEl(PopUp-11-4-fo));js(showOverlay());" />
+		<hotspot name="sdp5-off" id="shutdown-procedure-off" style="hotspot-check | hotspot5" ath="-12.282" atv="-40.891"		onclick="close-pop-ups();js(showEl(PopUp-11-5-fo));js(showOverlay());" />
+		<hotspot name="sdp6-off" id="shutdown-procedure-off" style="hotspot-check | hotspot6" ath="14.179" atv="-42.241"		onclick="close-pop-ups();js(showEl(PopUp-11-6-fo));js(showOverlay());" />
+		<hotspot name="sdp7-off" id="shutdown-procedure-off" style="hotspot-check | hotspot7" ath="24.047" atv="-39.966"		onclick="close-pop-ups();js(showEl(PopUp-11-7-fo));js(showOverlay());" />
+		<hotspot name="sdp8-off" id="shutdown-procedure-off" style="hotspot-check | hotspot8" ath="15.467" atv="-32.078"		onclick="close-pop-ups();js(showEl(PopUp-11-8-fo));js(showOverlay());" />
+		<hotspot name="sdp9-off" id="shutdown-procedure-off" style="hotspot-check | hotspot9" ath="31.194" atv="-31.331"		onclick="close-pop-ups();js(showEl(PopUp-11-9-fo));js(showOverlay());" />
+		<hotspot name="sdp10-off" id="shutdown-procedure-off" style="hotspot-check | hotspot10" ath="18.108" atv="-9.308"		onclick="close-pop-ups();js(showEl(PopUp-11-10-fo));js(showOverlay());" />		
+		<hotspot name="sdp11-off" id="shutdown-procedure-off" style="hotspot-check | hotspot11" ath="20.857" atv="-9.555"		onclick="close-pop-ups();js(showEl(PopUp-11-11-fo));js(showOverlay());" />
+		<hotspot name="sdp12-off" id="shutdown-procedure-off" style="hotspot-check | hotspot12" ath="12.076" atv="11.126"		onclick="close-pop-ups();js(showEl(PopUp-11-12-fo));js(showOverlay());" />
+		
+		<hotspot name="sdp13-off" id="shutdown-procedure-off" style="hotspot-check | hotspot13" ath="-20.191" atv="79.617"		onclick="close-pop-ups();js(showEl(PopUp-11-13-fo));js(showOverlay());" />
+		<hotspot name="sdp14-off" id="shutdown-procedure-off" style="hotspot-check | hotspot14" ath="-6.656" atv="-9.100"		onclick="close-pop-ups();js(showEl(PopUp-11-14-fo));js(showOverlay());" />
+		
+		
+		<!-- captain -->
+		<hotspot name="sdp1-cpt" id="shutdown-procedure-cap" style="hotspot-check | hotspot1" ath="-8.951" atv="51.318"			onclick="close-pop-ups();js(showEl(PopUp-11-1-cpt));js(showOverlay());" />
+		<hotspot name="sdp2-cpt" id="shutdown-procedure-cap" style="hotspot-check | hotspot2" ath="-0.360" atv="54.599"			onclick="close-pop-ups();js(showEl(PopUp-11-2-cpt));js(showOverlay());" />
+		<!-- New -->
+		<hotspot name="sdp3-cpt" id="shutdown-procedure-cap" style="hotspot-check | hotspot3" ath="-12.420" atv="11.026"		onclick="close-pop-ups();js(showEl(PopUp-11-3-cpt));js(showOverlay());" />
+		<hotspot name="sdp4-cpt" id="shutdown-procedure-cap" style="hotspot-check | hotspot4" ath="163.221" atv="-19.393"		onclick="close-pop-ups();js(showEl(PopUp-11-4-cpt));js(showOverlay());" />
+			
+		
+		<!-- Notes SHUTDWN PROCEDURE -->
+		<hotspot id="shutdown-procedure" 
+		extra="true" 
+		transcript="When L&#47;P has set the parking brake, R/P c&#47;n turn the fasten seatbelt sign off and complete the shutdown procedure.&lt;br/&gt;&lt;br/&gt;
+		
+		The anti collision light should be switched off only when engines are confirmed to be spooling down as this allows ground equipment&#47;handling to access the aircraft.&lt;br/&gt;&lt;br/&gt;
+		
+		Set transponder code 2000 &lt;u&gt;before&lt;/u&gt; setting the transponder to stby.&lt;br/&gt;&lt;br/&gt;
+		
+		The cockpit door shall be opened and unlocked by L&#47;P."  		
+		/>
+				
+				
+		<!--12	SECURE PROCEDURE  -->		
+
+		<hotspot name="sp1" id="secure-procedure" style="hotspot-check | hotspot1" ath="-89.651" atv="-75.735"		onclick="close-pop-ups();js(showEl(PopUp-12-1));js(showOverlay());" />
+		<hotspot name="sp2" id="secure-procedure" style="hotspot-check | hotspot2" ath="0.331" atv="-28.122" 		onclick="close-pop-ups();js(showEl(PopUp-12-2));js(showOverlay());" />
+		<hotspot name="sp3" id="secure-procedure" style="hotspot-check | hotspot3" ath="30.828" atv="-62.882" 		onclick="close-pop-ups();js(showEl(PopUp-12-3));js(showOverlay());" />
+		<hotspot name="sp4" id="secure-procedure" style="hotspot-check | hotspot4" ath="31.393" atv="-29.653" 		onclick="close-pop-ups();js(showEl(PopUp-12-4));js(showOverlay());" />
+		
+		
+		<!-- Notes SECURE PROCEDURE -->
+		<hotspot id="secure-procedure" 
+		extra="true" 
+		transcript="The Electrical power down procedure is added to the shutdown checklist.
+		A line is added to the secure checklist to allow the procedure to be done up to and including Bleed Air controls. &lt;br/&gt;&lt;br/&gt;
+		
+		The Trim Air Switch goes OFF.&lt;br/&gt;&lt;br/&gt;
+		
+		You may leave battery and ground power ON if handing over the aircraft to a maintenance person who acknowledges the handover."  		
+		/>
+		
+		
+	</scene>
+	
+</krpano>

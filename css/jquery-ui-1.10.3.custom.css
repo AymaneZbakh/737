@@ -1,0 +1,159 @@
+/*! jQuery UI - v1.10.3 - 2013-12-31
+* http://jqueryui.com
+* Includes: jquery.ui.core.css, jquery.ui.tabs.css, jquery.ui.theme.css
+* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Trebuchet%20MS%2CTahoma%2CVerdana%2CArial%2Csans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=f6a828&bgTextureHeader=gloss_wave&bgImgOpacityHeader=35&borderColorHeader=e78f08&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=eeeeee&bgTextureContent=highlight_soft&bgImgOpacityContent=100&borderColorContent=dddddd&fcContent=333333&iconColorContent=222222&bgColorDefault=f6f6f6&bgTextureDefault=glass&bgImgOpacityDefault=100&borderColorDefault=cccccc&fcDefault=1c94c4&iconColorDefault=ef8c08&bgColorHover=fdf5ce&bgTextureHover=glass&bgImgOpacityHover=100&borderColorHover=fbcb09&fcHover=c77405&iconColorHover=ef8c08&bgColorActive=ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=fbd850&fcActive=eb8f00&iconColorActive=ef8c08&bgColorHighlight=ffe45c&bgTextureHighlight=highlight_soft&bgImgOpacityHighlight=75&borderColorHighlight=fed22f&fcHighlight=363636&iconColorHighlight=228ef1&bgColorError=b81900&bgTextureError=diagonals_thick&bgImgOpacityError=18&borderColorError=cd0a0a&fcError=ffffff&iconColorError=ffd27a&bgColorOverlay=666666&bgTextureOverlay=diagonals_thick&bgImgOpacityOverlay=20&opacityOverlay=50&bgColorShadow=000000&bgTextureShadow=flat&bgImgOpacityShadow=10&opacityShadow=20&thicknessShadow=5px&offsetTopShadow=-5px&offsetLeftShadow=-5px&cornerRadiusShadow=5px
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.ui-tabs {
+	/* position: relative; */ /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+/* 	padding: .2em;
+	 */
+	 }
+.ui-tabs .ui-tabs-nav {
+	margin: 0;
+	position:absolute;
+	left:0;
+	top:0;
+	width:95.4%;
+}
+#PopUp-TakeoffBriefing .ui-tabs .ui-tabs-nav li 
+{
+	width:20%;
+}
+#PopUp-ApproachBriefing .ui-tabs .ui-tabs-nav li {
+	width:25%;
+}
+
+.ui-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 0;
+	text-align:center;
+	
+/* 	margin: 1px .2em 0 0;
+	 */	
+	border-bottom-width: 1px;
+	padding: 0;
+	white-space: nowrap;
+}
+.ui-tabs .ui-tabs-nav li a {
+	float: left;
+	padding: .5em 0em;
+	text-decoration: none;
+	width:100%;	
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	margin-bottom: -1px;
+	border-bottom-width:1;
+/* 	padding-bottom: 1px;
+	 */}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
+	cursor: text;
+}
+.ui-tabs .ui-tabs-nav li a, /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+	cursor: pointer;
+}
+.ui-tabs .ui-tabs-panel {
+	display: block;
+	border-width: 0;
+	padding: 1em 0em;
+	background: none;
+}
+
+/* Component containers
+----------------------------------*/
+.ui-widget {
+/* 	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif; */	
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	/* font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif; */
+	font-size: 1em;
+}
+.ui-widget-content {
+
+}
+.ui-widget-content a {
+
+}
+.ui-widget-header {
+	/* border: 1px solid black;
+	background: green;
+	color: #ffffff;
+	font-weight: bold; */
+}
+.ui-widget-header a {
+	/* color: #ffffff; */
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	border: 1px solid #ffffff;
+	background: rgba(32,106,143,1);
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+	outline: 0;
+	font-family: Gotham-Condensed-Medium;
+	/* font-size:1em; */
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	border: 1px solid #FFFFFF;
+	background: rgba(123,166,187,1);
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+	outline: 0;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+	border: 1px solid #FFFFFF;
+	background: transparent;
+	
+	color: rgba(32,106,143,1);
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+	color: rgba(32,106,143,1);
+	text-decoration: none;
+	outline: 0;
+}

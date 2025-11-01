@@ -1,0 +1,347 @@
+@font-face {
+  font-family: Gotham-Medium;
+  src: url(../fonts/GothamMedium.otf);
+}
+@font-face {
+  font-family: Gotham-Medium;
+  src: url(../fonts/GothamMedium-Italic.otf);
+  font-style: italic;
+}
+@font-face {
+  font-family: Gotham-Light;
+  src: url(../fonts/GothamLight.otf);
+}
+@font-face {
+  font-family: Gotham-Light;
+  src: url(../fonts/GothamLight-Italic.otf);
+  font-style: italic;
+}
+@font-face {
+  font-family: Gotham-Book;
+  src: url(../fonts/GothamBook.otf);
+}
+@font-face {
+  font-family: Gotham-Condensed-Medium;
+  src: url(../fonts/GothamCondensed-Medium.otf);
+}
+
+.popup-class .row {
+  padding: 0;
+  width: auto;
+  margin-top: 0;
+}
+
+i {
+  font-style: italic;
+}
+
+.imageClass {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+#mainPane .bar.bar-stable .title {
+  font-family: "Gotham-Condensed-Medium", "-apple-system", "Helvetica Neue",
+    "Roboto", "Segoe UI", sans-serif;
+  color: #00245d;
+  font-size: 1.5em;
+}
+
+.aboutText ul {
+  font-family: Gotham-Book;
+  width: 90%;
+  color: white;
+  margin: 0 auto;
+  font-size: 1.6em;
+  line-height: 1.4em;
+  list-style: circle;
+}
+
+button.aboutButton {
+  border: none;
+  background: none;
+  font-size: 1em;
+}
+.aboutButton.active,
+.aboutButton.activated {
+  color: #2ea3f2;
+}
+
+.previewButton {
+  background-color: #2ea3f2;
+  color: #fff;
+  width: 200px;
+  font-family: Gotham-Book;
+  margin-top: 35px;
+  margin-left: -100px;
+  left: 50%;
+}
+.previewButton:hover,
+.subscriptionBtn:hover {
+  color: #fff;
+  border: transparent;
+}
+.previewButton.active,
+.previewButton.activated,
+.subscriptionBtn.active,
+.subscriptionBtn.activated {
+  background-color: #58b5f5;
+  border-color: transparent;
+}
+
+body {
+  background: none;
+}
+
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+}
+
+#introScreen {
+  pointer-events: all;
+  display: block;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 99996;
+}
+#introScreen p,
+#introScreen h1,
+#introScreen h2,
+#introScreen h3 {
+  color: white;
+}
+
+#subscriptionList {
+  width: 100%;
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+}
+.subscriptionBtn {
+  width: 100%;
+  background: white;
+  position: relative;
+  background-color: #2ea3f2;
+  color: white;
+  font-family: Gotham-Book;
+  float: left;
+  line-height: 1em;
+}
+
+.subscriptionBtn .subName {
+  margin: 15px 0;
+  line-height: 1.3em;
+}
+.subscriptionBtn .price {
+  font-size: 1.6em;
+  margin: 30px 0;
+  font-family: Gotham-Light;
+  line-height: 1em;
+}
+.subscriptionBtn .duration {
+  font-size: 1.4em;
+  margin: 15px 0 0px;
+}
+.subscriptionBtn .small {
+  font-size: 0.8em;
+  margin: 5px 0;
+}
+
+p.restoreText {
+  font-size: 1.1em;
+  margin: 5px auto 0px;
+  text-align: center;
+  width: 100%;
+}
+
+p.textBtn {
+  cursor: pointer;
+  color: #999999 !important;
+  font-size: 1.1em;
+  margin: 0 auto 10px;
+  text-align: center;
+  width: 120px;
+}
+
+p.textBtn.activated,
+p.textBtn.active {
+  background: none;
+  border: none;
+  color: #777777 !important;
+}
+
+.ifOfflineText {
+  display: none;
+  text-align: center;
+}
+
+#expiredTxt {
+  font-style: italic;
+  text-align: center;
+  color: #999999 !important;
+  display: none;
+}
+.popover-backdrop.active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popover {
+  height: 260px;
+}
+
+.platform-ios .popover .scroll-content {
+  margin: 0;
+}
+
+ion-content .row {
+  margin: 0;
+}
+
+#mainPane.pane {
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 99997;
+}
+.pane * {
+  pointer-events: all;
+}
+
+.backdrop.visible,
+.backdrop.active {
+  pointer-events: all;
+}
+
+#faqWrapper {
+  height: 500px;
+  width: 666px;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  margin-bottom: -250px;
+  margin-left: -333px;
+  background-color: white;
+  overflow: hidden;
+  display: none;
+  z-index: 99999;
+}
+.faqOverlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99998;
+  pointer-events: all;
+}
+ion-nav-bar {
+  pointer-events: all;
+}
+
+#faqWrapper a.item-content:hover,
+#faqWrapper a.item-content:focus,
+#faqWrapper a:hover,
+#faqWrapper a:focus {
+  color: rgb(68, 68, 68);
+  text-decoration: none;
+}
+/*
+  .popover-wrapper a:hover, .popover-wrapper a:focus{
+      color:rgb(51, 51, 51);
+      text-decoration: none;
+  }*/
+
+.button-inline {
+  min-height: initial !important;
+  line-height: inherit !important;
+  height: auto !important;
+  padding: 0 !important;
+  border: none !important;
+  min-width: initial !important;
+}
+
+.button-inline:before {
+  line-height: inherit !important;
+  height: inherit;
+}
+
+ion-nav-bar {
+  height: 0px;
+  background-color: transparent !important;
+  line-height: 0px;
+}
+
+.platform-ios.platform-cordova:not(.fullscreen)
+  #faqWrapper
+  .bar-header:not(.bar-subheader).item-input-inset
+  .item-input-wrapper {
+  margin-top: 0px !important;
+}
+.platform-ios.platform-cordova:not(.fullscreen)
+  #faqWrapper
+  .bar-header:not(.bar-subheader)
+  > * {
+  margin-top: 0px !important;
+}
+.platform-ios.platform-cordova:not(.fullscreen)
+  #faqWrapper
+  .bar-header:not(.bar-subheader) {
+  height: 44px;
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) #faqWrapper .tabs-top > .tabs,
+.platform-ios.platform-cordova:not(.fullscreen) #faqWrapper .tabs.tabs-top {
+  top: 44px;
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) #faqWrapper .has-header,
+.platform-ios.platform-cordova:not(.fullscreen) #faqWrapper .bar-subheader {
+  top: 44px;
+}
+
+.backdrop,
+.loading-container,
+.popup-container {
+  z-index: 99999;
+}
+
+.faqlist li {
+  margin: 5px 0;
+}
+
+.subTerms {
+  text-align: center;
+  font-size: 0.7em;
+  opacity: 0.8;
+  margin: 0 120px;
+  line-height: 1.1em;
+}
+
+.subTerms a,
+.subTerms a:hover,
+.subTerms a:focus,
+.subTerms a:active {
+  color: white;
+  text-decoration: underline;
+}
